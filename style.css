@@ -222,7 +222,7 @@ footer {
   /* opacity: 0.7; */
   display: flex;
   flex-direction: column-reverse;
-
+  padding: 30px 0;
   align-items: center;
   background-color: rgba(160, 160, 160, 0.8);
   font-size: 1.4rem;
@@ -242,7 +242,7 @@ footer {
 
 .footerLogo > span > a:hover {
   color: var(--color-black-main-hover);
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .footerSocials {
@@ -250,9 +250,16 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding-right: 20px;
+  transition: color 0.2s ease-in-out;
 }
 
-.footerSocials > a > img {
-  width: 2.5rem;
+.fab {
+  font-size: 2.5rem;
+  padding: 20px;
+  color: var(--color-white-main);
+  transition: color 0.2s ease-in-out;
+}
+
+.fab:hover {
+  color: var(--color-black-main-hover);
 }
