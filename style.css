@@ -1,6 +1,7 @@
 :root {
   --font-Baloo: "Baloo Tammudu 2", cursive;
   --font-Lato: "Lato", sans-serif;
+  --font-Montserrat: "Montserrat", sans-serif;
   --color-blue-main: rgb(0, 107, 183);
   --color-blue-main-hover: rgb(1, 97, 165);
   --color-red-main: rgb(237, 23, 75);
@@ -8,6 +9,7 @@
   --color-red-secondary: rgb(216, 30, 35);
   --color-black-main: rgb(20, 20, 20);
   --color-black-main-hover: rgb(71, 71, 71);
+  --color-grey-main: rgb(160, 160, 160);
   --color-white-main: #fbfbfb;
 }
 
@@ -24,6 +26,7 @@ img {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 body {
@@ -117,6 +120,7 @@ nav {
 
 .pageNav > li > a {
   color: var(--color-white-main);
+  /* text-transform: lowercase; */
 }
 
 /* HOME PAGE MAIN */
@@ -129,6 +133,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(8, 1fr);
+  font-family: var(--font-Montserrat);
 }
 
 .main_box {
@@ -141,15 +146,15 @@ nav {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.8rem;
   color: var(--color-white-main);
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
   text-shadow: 1px 1px var(--color-black-main);
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--color-white-main);
   text-align: center;
   font-weight: 400;
@@ -157,17 +162,69 @@ h3 {
   padding: 20px 0;
 }
 
+.blueText {
+  color: var(--color-blue-main);
+}
+
+.redText {
+  color: var(--color-red-main);
+}
+
 .main_box2 {
-  grid-row: 7/7;
+  grid-row: 7/8;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 #read_more {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--color-white-main);
   text-align: center;
-  text-shadow: 1px 1px var(--color-black-main);
+  transition: color 0.3s ease-in-out;
+}
+
+#read_more:hover {
+  color: var(--color-red-secondary);
+  transition: color 0.3s ease-in-out;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-grey-main);
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: var(--font-Montserrat);
+}
+
+.footerLogo {
+    padding: 10px 20px;
+    color: var(--color-white-main);
+}
+
+.footerLogo > span > a {
+    color: var(--color-white-main);
+    transition: color 0.3s ease-in-out;
+}
+
+.footerLogo > span > a:hover {
+    color: var(--color-black-main-hover);
+    transition: color 0.3s ease-in-out;
+}
+
+.footerSocials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.footerSocials > a > img {
+  width: 32px;
 }
