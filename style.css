@@ -1,0 +1,173 @@
+:root {
+  --font-Baloo: "Baloo Tammudu 2", cursive;
+  --font-Lato: "Lato", sans-serif;
+  --color-blue-main: rgb(0, 107, 183);
+  --color-blue-main-hover: rgb(1, 97, 165);
+  --color-red-main: rgb(237, 23, 75);
+  --color-red-main-hover: rgb(255, 43, 96);
+  --color-red-secondary: rgb(216, 30, 35);
+  --color-black-main: rgb(20, 20, 20);
+  --color-black-main-hover: rgb(71, 71, 71);
+  --color-white-main: #fbfbfb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--font-Lato);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--color-black-main);
+  display: flex;
+  justify-content: space-between;
+}
+
+#logoNBA {
+  max-width: 140px;
+}
+
+.logo {
+  font-family: var(--font-Baloo);
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_about {
+  color: var(--color-blue-main);
+  position: relative;
+}
+
+.logo_about::after {
+  font-size: 20px;
+  content: "■";
+  position: relative;
+  padding-left: 3px;
+  color: var(--color-white-main);
+}
+
+.logo_NBA {
+  color: var(--color-red-main);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.pageNav {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pageNav > li {
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.pageNav > li:hover {
+  background-color: var(--color-black-main-hover);
+  transition: background 0.3s ease-in-out;
+}
+
+.active {
+  background-color: var(--color-red-main);
+  transition: background 0.3s ease-in-out;
+}
+
+.active:hover {
+  background-color: var(--color-red-main-hover);
+  transition: background 0.3s ease-in-out;
+}
+
+.pageNav > li > a {
+  color: var(--color-white-main);
+}
+
+/* HOME PAGE MAIN */
+
+.mainContainer {
+  background-image: url(images/mainPageBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.main_box {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--color-white-main);
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 1px 1px var(--color-black-main);
+}
+
+h3 {
+  font-size: 3rem;
+  color: var(--color-white-main);
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 1px 1px var(--color-black-main);
+  padding: 20px 0;
+}
+
+.main_box2 {
+  grid-row: 7/7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#read_more {
+  font-size: 3rem;
+  color: var(--color-white-main);
+  text-align: center;
+  text-shadow: 1px 1px var(--color-black-main);
+}
