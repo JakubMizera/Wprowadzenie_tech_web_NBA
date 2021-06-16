@@ -126,15 +126,15 @@ nav {
 /* HOME PAGE MAIN */
 
 .mainContainer {
-  background-image: url(images/mainPageBackground.jpg);
-  background-position: center;
+  background-image: url(images/mainPageBackground2.jpg);
+  background-position: top;
   background-size: cover;
   min-height: 120vh;
-  
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, 1fr);
-  
+
   font-family: var(--font-Montserrat);
 }
 
@@ -199,15 +199,19 @@ h3 {
 
 #read_more:hover {
   color: var(--color-red-main);
-  text-shadow: 1px 1px 3px rgba(255,255,255, 0.5);
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContainer {
+    min-height: 170vh;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .mainContainer {
     min-height: 200vh;
-    background-size: 100% 50%;
-
   }
 }
 
@@ -218,7 +222,7 @@ footer {
   /* opacity: 0.7; */
   display: flex;
   flex-direction: column-reverse;
-  
+
   align-items: center;
   background-color: rgba(160, 160, 160, 0.8);
   font-size: 1.4rem;
@@ -227,26 +231,26 @@ footer {
 }
 
 .footerLogo {
-    padding: 10px;
-    color: var(--color-white-main);
+  padding: 10px;
+  color: var(--color-white-main);
 }
 
 .footerLogo > span > a {
-    color: var(--color-white-main);
-    transition: color 0.3s ease-in-out;
+  color: var(--color-white-main);
+  transition: color 0.3s ease-in-out;
 }
 
 .footerLogo > span > a:hover {
-    color: var(--color-black-main-hover);
-    transition: color 0.3s ease-in-out;
+  color: var(--color-black-main-hover);
+  transition: color 0.3s ease-in-out;
 }
 
 .footerSocials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-right: 20px;
 }
 
 .footerSocials > a > img {
