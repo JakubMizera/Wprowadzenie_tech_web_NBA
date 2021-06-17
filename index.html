@@ -24,21 +24,21 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="aboutHeader">
         <div class="logo">
           <a href="index.html">
             <img id="logoNBA" src="images/nbaLogo.png" alt="nba logo" />
           </a>
-          <a id="logo_link" href="index.html">
-            <span class="logo_about">about</span>
-            <span class="logo_NBA">NBA</span>
-          </a>
+          <div id="logo_link">
+            <a href="about.html" class="logo_about">about</a>
+            <a href="teams.html" class="logo_NBA">NBA</a>
+          </div>
         </div>
         <nav>
           <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
           </div>
           <ul class="pageNav">
             <li class="active">
@@ -48,7 +48,7 @@
               <a href="about.html">About</a>
             </li>
             <li>
-              <a href="styles.html">Teams</a>
+              <a href="teams.html">Teams</a>
             </li>
             <li>
               <a href="gallery.html">Gallery</a>

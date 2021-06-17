@@ -275,14 +275,19 @@ h3 {
     position: relative;
   }
 
+  .hamAni {
+    transform: rotate(90deg);
+    transition: all 0.4s ease-in-out;
+  }
+
   .hamburger {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50%;
+    top: 38%;
     right: 5%;
-    transform: translate(-5%, -50%);
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
   }
 
   .pageNav {
