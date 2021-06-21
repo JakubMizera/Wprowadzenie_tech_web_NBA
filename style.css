@@ -477,7 +477,6 @@ h4 {
 .title {
   color: var(--color-white-main);
   font-size: 3rem;
-  
 }
 
 .italic {
@@ -601,7 +600,7 @@ h5 > a:hover {
   justify-content: center;
   align-items: center;
   border-bottom: 1px dashed var(--color-white-main);
-} 
+}
 
 .team:last-child {
   border: none;
@@ -614,7 +613,6 @@ h5 > a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  
 }
 
 h6 {
@@ -646,7 +644,6 @@ ol > li {
 }
 
 /* Blog */
-
 
 .blogBox {
   display: grid;
@@ -733,3 +730,30 @@ ol > li {
     padding: 20px;
   }
 }
+
+/* GALLERY */
+
+.galleryPhotos {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-auto-rows: repeat(auto-fit, 1fr);
+  padding: 20px;
+}
+
+.galleryWrapper {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.galleryWrapper > img {
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.galleryWrapper > img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
