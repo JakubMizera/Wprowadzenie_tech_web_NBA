@@ -350,7 +350,7 @@ h3 {
 footer {
   grid-row: 9/14;
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(160, 160, 160, 0.8);
   font-size: 1.4rem;
@@ -382,7 +382,7 @@ footer {
 }
 
 .fab {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 20px;
   color: var(--color-white-main);
   transition: color 0.2s ease-in-out;
@@ -418,6 +418,10 @@ footer {
 
 .aboutBox:first-child {
   min-height: 90vh;
+}
+
+.aboutBox:last-child {
+  min-height: 40vh;
 }
 
 .photoWrapper {
@@ -486,6 +490,10 @@ h4 {
   grid-auto-rows: min-content;
 }
 
+.dividerBox:nth-child(3) {
+  padding: 40px 20px;
+}
+
 .leftBox {
   grid-column: 1/2;
   padding: 0 50px;
@@ -498,4 +506,55 @@ h4 {
 .rightBox {
   display: flex;
   justify-content: center;
+}
+
+.rightBox > img {
+  max-height: 800px;
+}
+
+.leftBox2 {
+  grid-column: 1/2;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.rightBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+h5 {
+  color: var(--color-white-main);
+  font-size: 2rem;
+  font-family: var(--font-Montserrat);
+  text-align: center;
+}
+
+h5 > a {
+  color: var(--color-red-main);
+  font-style: italic;
+  transition: color 0.2s ease-in-out;
+}
+
+h5 > a:hover {
+  color: var(--color-red-main-hover);
+  transition: color 0.2s ease-in-out;
+}
+
+.borderBottom {
+  border-bottom: 1px solid var(--color-red-main);
+}
+
+@media screen and (max-width: 1100px) {
+  .dividerBox {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+  }
+
+  .leftBox2 {
+    min-width: 300px;
+  }
 }
