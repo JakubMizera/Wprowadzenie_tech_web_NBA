@@ -49,7 +49,11 @@ body {
 /* HEADER */
 
 header {
-  background-color: var(--color-black-main);
+  /* background-color: var(--color-black-main); */
+  background: linear-gradient(
+    var(--color-black-main),
+    var(--color-black-secondary)
+  );
   grid-row: 1/1;
   display: flex;
   justify-content: space-between;
@@ -889,3 +893,6 @@ input[type="email"]:focus {
     padding: 40px;
   }
 }
+
+/* BLOG POST */
+
