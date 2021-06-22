@@ -20,9 +20,7 @@
     --color-background-main: rgb(92, 92, 92);
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -45,7 +43,6 @@ body {
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
 }
-
 
 /* HEADER */
 
@@ -154,7 +151,6 @@ nav {
 .pageNav>li>a {
     color: var(--color-white-main);
 }
-
 
 /* HOME PAGE MAIN */
 
@@ -339,7 +335,6 @@ h3 {
     }
 }
 
-
 /* FOOTER */
 
 .indexFooter {
@@ -402,7 +397,6 @@ footer {
 .aboutFooter {
     grid-row: 3/3;
 }
-
 
 /* ABOUT */
 
@@ -566,7 +560,6 @@ h5>a:hover {
     }
 }
 
-
 /* TEAMS */
 
 .teamsMain {
@@ -594,9 +587,6 @@ h5>a:hover {
 }
 
 .team {
-    /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: min-content; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -643,7 +633,6 @@ ol>li {
         grid-template-columns: 1fr;
     }
 }
-
 
 /* Blog */
 
@@ -710,10 +699,11 @@ ol>li {
     align-items: center;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 3px var(--color-blue-main-shadow);
 }
 
 .blogBTN:hover {
-    background-color: var(--color-white-background);
+    background-color: var(--color-white-main);
     color: var(--color-blue-main);
     transition: all 0.2s ease-in-out;
 }
@@ -731,7 +721,6 @@ ol>li {
         padding: 20px;
     }
 }
-
 
 /* GALLERY */
 
@@ -758,7 +747,6 @@ ol>li {
     transition: all 0.5s ease-in-out;
     opacity: 0.8;
 }
-
 
 /* CONTACT */
 
@@ -810,8 +798,7 @@ ol>li {
     padding: 30px 0;
 }
 
-input[type="text"],
-input[type="email"] {
+input[type="text"], input[type="email"] {
     width: 80%;
     height: 50px;
     padding: 30px;
@@ -825,13 +812,11 @@ input[type="email"] {
     transition: all 0.2s ease-in-out;
 }
 
-input[type="text"]::placeholder,
-input[type="email"]::placeholder {
+input[type="text"]::placeholder, input[type="email"]::placeholder {
     color: var(--color-white-main);
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="text"]:focus, input[type="email"]:focus {
     border: 2px solid var(--color-blue-main-hover);
     background-color: var(--color-background-main);
     transition: all 0.2s ease-in-out;
@@ -883,9 +868,120 @@ input[type="email"]:focus {
     }
 }
 
-
 /* BLOG POST */
 
+.matchTitle {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 40px;
+}
+
+.scoreBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.recapBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: min-content;
+}
+
+.recap {
+    grid-column: 1/3;
+}
+
+.recapText {
+    color: var(--color-white-main);
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    font-family: var(--font-Montserrat);
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.gameInfo {
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px dashed var(--color-white-main);
+}
+
+.infoBox {
+    color: var(--color-white-main);
+    display: flex;
+    gap: 10px;
+    padding: 20px 30px;
+}
+
+.sideInfo {
+    font-family: var(--font-Montserrat);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.gameInfoTitle {
+    font-family: var(--font-Montserrat);
+    font-size: 2rem;
+    padding-bottom: 30px;
+    color: var(--color-red-main);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.matchPhotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.matchPhotos>img {
+    padding: 15px;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: var(--font-Lato);
+    font-size: 14px;
+    overflow: hidden;
+    padding: 15px 10px;
+    word-break: normal;
+}
+
+.tg th {
+    border-style: solid;
+    border-width: 1px;
+    font-family: var(--font-Lato);
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 15px 10px;
+    word-break: normal;
+}
+
+.tg .tg-eikp {
+    border-color: var(--color-white-main);
+    color: var(--color-white-main);
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+}
+
+.tg .tg-772y {
+    border-color: var(--color-white-main);
+    color: var(--color-white-main);
+    font-size: 28px;
+    text-align: center;
+    vertical-align: top;
+}
 
 /* lightbox */
 
